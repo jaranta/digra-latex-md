@@ -1,0 +1,135 @@
+---
+title: "Your Title goes Here: It May Carry Over onto a Second Line"
+author:
+- name: First Author
+  affiliation: Institutional Affiliation
+  address: Address line 1
+  address2: Address line 2
+  telephone: telephone
+  email: firstauthor@institution.com
+- name: Second Author, Third Author
+  affiliation: Institutional Affiliation
+  address: Address line 1
+  address2: Address line 2
+  telephone: telephone
+  email: secondauthor@institution.com, thirdauthor@institution.com
+bibliography: bibliography.bib
+conference: "1^st^ International Joint Conference of DiGRA and FDG"
+---
+   
+# Abstract
+   
+Place your abstract here. Your abstract goes here. In this paper we describe the formatting requirements for DiGRA Conference Proceedings, and offer recommendations on writing for the worldwide DiGRA readership.
+
+## Keywords
+
+keyword, keyword, keyword, keyword
+
+# Introduction
+
+Place your text here. Your text goes here. This format is to be used for submissions that are published in the electronic conference proceedings for DiGRA conferences^[The format was developed for DiGRA 2011, modified slightly for DiGRA Nordic 2012 and FDG/DiGRA 2016, and may change for future conferences. A slightly different format may apply for the forthcoming DiGRA journal.]. The same format will be used for conference articles uploaded to the DiGRA library.
+
+In essence, you should format your paper exactly like this document. The easiest way to do this is simply to download this template from the conference web site, and replace the content with your own material.
+
+# Page size and columns
+
+The DiGRA proceedings are formatted for a US Letter format, single column page. The size is chosen to allow for on-screen readability. On each page your material (not including the page number) should fit within a rectangle of 14 x 22 cm (5.5 x 8.75 in.), centered on a US letter page, beginning 2.54 cm (1 in.) from the top of the page. On an A4 page, use a text area of the same dimensions, again centered. Right margins should be justified, not ragged.
+
+# Sections
+
+Section headings should be typeset in 12-point Arial bold. Section headers should be set in all capitals. Leave space corresponding to approximately one line above each heading.
+
+## Subsections
+
+Headings of subsections should be in 12-point Arial bold with initial letters capitalized. (Note: For sub-sections, a word like the or of is not capitalized unless it is the first word of the heading.)
+
+### Sub-subsections
+
+Headings of sub-subsections should be in 12-point Arial italic, with the first letter capitalized. Do not use more than three levels of headings. 
+
+# Body text
+
+For body text, please use a 11-point Times Roman font or, if this is unavailable, another proportional font with serifs, as close as possible in appearance to Times Roman 11-point. The Press 10-point font available to users of Script is a good substitute for Times Roman. If Times Roman is not available, try the font named Computer Modern Roman. Please use sans-serif or non-proportional fonts only for special purposes, such as headings or source code text. 
+
+# Title and authors
+
+Your paper’s title, authors and affiliations should run across the full width of the page and centered. The title should be in Arial 18-point bold; use Helvetica if Arial is not available. Authors’ names should be in Times Roman 14-point bold, and affiliations in Times Roman 11-point.
+
+Place author names and addresses below each other. For multiple authors with the same affiliation, place the names at the same line with the address below both. For more than three authors, you may have to place some address information in a footnote, or in a named section at the end of your paper. Please use full international addresses and telephone dialing prefixes.
+
+As the template primarily has been developed for online readability, it is allowed to include active links to web pages and email addresses.
+
+# Abstract and Keywords
+
+Every submission should begin with an abstract of up to 150 words, followed by a set of keywords. The abstract should be a concise statement of the problem, approach and conclusions of the work described. It should clearly state the paper's contribution to the DiGRA community.
+
+# Figures and tables
+
+Place figures and tables at the top or bottom of the appropriate column or columns, on the same page as the relevant text (see Figure 1). A figure or table may extend to a maximum width of 14 cm (5.5 in.). If possible, the Figure should appear on the same page in which it is first referenced.
+
+Captions should be Times New Roman 11-point bold. They should be numbered (e.g., "Table 1" or "Figure 2"), centered and placed beneath the figure or table. Please note that the words "Figure" and "Table" should be spelled out (e.g., "Figure" rather than "Fig.") wherever they occur.
+
+Papers and notes may use color figures, which are included in the page limit. The paper may be accompanied by various media files, such as videos, sound clips, and even demonstrator games. However, the paper should stand on its own without such media, as they may not be available to everyone who reads the paper.
+
+|             | **Male** | **Female** | **Did not Respond** |
+|-------------|----------|------------|---------------------|
+| Digital     | 43       | 36         | 21                  |
+| Non-Digital | 42       | 53         | 5                   |
+
+: This is the title for my table, it is justified both left and right, and it is in 11 points. Try to centre the text of the table as shown. Table content may be set in smaller
+
+# Endnotes, bibliography and ludography
+
+## Endnotes
+
+DiGRA recommends the use of endnotes^[This is another example of an endnote.]  rather than footnotes. These should be placed after the body text, but before the Bibliography section and numbered 1, 2, 3 etc. Endnotes are also in 11 point Times New Roman.
+
+## Citations and References
+
+DiGRA uses a simplified version of the Chicago citation system. In running text and endnotes, use a verbose parenthesis format (Author last names Publication-year) or (Author last names Publication year, Page/Chapter) to indicate your reference. If the authors’ name is mentioned in running text, use only the publication year in parenthesis. Anderson [-@ethics, 453] may or may not think this is a good idea, but it doesn’t matter since this sentence is only included as an example. If a reference has more than two authors [@schwartz.1995], use the name of the first author "et al." in the reference.
+
+Organize the bibliography alphabetically by last name of the first author. See the bibliography towards the end of the template for example formatting of references.
+
+## Game references
+
+For games, set the game’s name in italics with initial capitals. On first occurrence in the text, include the developer and publication year in parenthesis, e.g. *World of Warcraft* [@WoW]. There doesn't seem to be a clear way to cite a game in LaTeX so it is recommended to use the misc type in the bibliography.  Depending on the use of the game in the context of the article, you may also choose to refer to the principal designer(s), creator(s), and so on. Follow this format as closely as possible:
+
+Developer. (Year). *Title*. [Platform, Version], Publisher, Release City/State and Country: played day month, year.
+
+See the Bibliography section towards the end of this template for examples.
+
+# Language and style
+
+The written and spoken language of DiGRA is English. Spelling and punctuation may use any dialect of English (e.g., British, Canadian, US, etc.) provided this is done consistently. To ensure suitability for an international audience, please pay attention to the following:
+
+* Write in a straightforward style. Try to avoid long or complex sentence structures.
+* Briefly define or explain all technical terms that may be unfamiliar to readers.
+* Explain all acronyms the first time they are used in your text – e.g., "Alternate Reality Game (ARG)".
+* Explain local references (e.g., not everyone knows that a child in the first grade of school in the US is 6-7 years old).
+* Explain "insider" comments. Ensure that your whole audience understands any reference whose meaning you do not describe (and do not assume that everyone has read a particular article).
+* Avoid or explain colloquial language and puns. Humor and irony are difficult to translate.
+* Use unambiguous forms for culturally localized concepts, such as times, dates, currencies and numbers (e.g., "1-5- 97" or "5/1/97" may mean 5 January or 1 May, and "seven o’clock" may mean 7:00 am or 19:00). For small currencies, indicate equivalences in Euro or Dollar – e.g., "Participants were paid 10,000 lire, or roughly $5."
+* Be careful with the use of gender-specific pronouns (he, she) and other gendered words (chairman, manpower, man-months). Use inclusive language that is gender-neutral (e.g., she or he, they, s/he, chair, staff, staff-hours, person-years).
+* If possible, use the full (extended) alphabetic character set for names of persons, institutions, and places (e.g., Grønbæk, Lafreniére, Sánchez, Universität, Weißenbach, Züllighoven, Århus, etc.). Avoid using non-latin alphabets for concepts and names. Make sure to include latin transcriptions if this is necessary.
+
+# Producing and testing pdf files
+
+We recommend that you produce a PDF version of your submission well before the final deadline. Besides making sure that you are able to produce a PDF, you will need to check that (a) the length of the file remains within the submission category’s page limit, if applicable, (b) the PDF file size is 4 megabytes or less, and (c) the file can be read and printed using Adobe Acrobat Reader.
+
+Note that most reviewers will use a North American/European version of Acrobat reader, which cannot handle documents containing non-North American or non-European fonts (e.g. Asian fonts). Please therefore do not use Asian fonts, and verify this by testing with a North American/European Acrobat reader (freely available from Adobe). Something as minor as including a space or punctuation character in a two-byte font can render a file unreadable.
+
+# Blind review
+
+Some DiGRA submission categories require blind review. To prepare your submission for blind review, remove author and institutional identities in the title and header areas of the paper. To preserve formatting, we recommend replacing identifying information with generic values (e.g. Anonymous Author at Anonymous Institution). You may also need to remove part or all of the Acknowledgments text. Further suppression of identity in the body of the paper and references is left to the authors' discretion. For more details, see the submission guidelines and checklist for your submission category.
+
+# Conclusion
+
+It is important that you write for the DiGRA audience. Please read previous years' Proceedings (available from the DiGRA library, http://www.digra.org/dl) to understand the writing style and conventions that successful authors have used. It is particularly important that you state clearly what you have done, not merely what you plan to do, and explain how your work is different from previously published work, i.e., what is the unique contribution that your work makes to the field? Please consider what the reader will learn from your submission, and how they will find your work useful. If you write with these questions in mind, your work is more likely to be successful, both in being accepted into the conference, and in influencing the work of our field.
+
+# Acknowledgments
+
+This template (used originally in DiGRA 2011 conference) was developed based on a similar template for the CHI conference (Doe and Smith 2011) and the template from DiGRA 2005. Some of the references cited in this paper are included for illustrative purposes only. Special thanks to Annika Waern and José Zagal.
+
+\theendnotes
+
+# Bibliography

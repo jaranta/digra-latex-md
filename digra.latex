@@ -1,0 +1,198 @@
+\documentclass[11pt]{article}
+
+ 
+\typeout{Conference Style for DiGRA for LaTeX 2e -- version of 13 January 2016}
+
+\usepackage{titlesec}
+\usepackage{authblk}
+\usepackage[labelfont=bf, margin=1in]{caption}
+\usepackage[tmargin=1in,bmargin=1in,lmargin=1.5in,rmargin=1.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage[super]{nth}
+\usepackage{caption}
+\usepackage{endnotes}
+%Hyperref needs to be loaded before url, so we pass options to url
+%package to break links at hyphens to make url's in bibliographies
+%work.
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx,grffile}
+\usepackage{longtable,booktabs}
+
+% Make links simpler, inc. in bibliography
+\hypersetup{breaklinks=true,
+            bookmarks=false,
+            colorlinks=true,
+            citecolor=darkgray,
+            urlcolor=darkgray,
+            linkcolor=darkgray,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+
+%Change footnotes to endnotes and format them correctly
+\renewcommand{\notesname}{}
+\renewcommand{\footnotesize}{\fontsize{9}{13}\selectfont}
+%Use endnotes instead of footnotes
+\let\footnote=\endnote
+%Redefine the default title "Notes" to a "ENDNOTES"
+\def\notesname{ENDNOTES}%
+\def\enotesize{\normalsize}
+\def\enoteheading{\section*{\uppercase{\notesname}}%
+     \leavevmode\par\vskip-\baselineskip}
+%Change endnote number formatting
+\patchcmd{\theendnotes}
+  {\makeatletter}
+  {\makeatletter\renewcommand\makeenmark{\theenmark{} }}
+  {}{}
+%Remove paragraph indenting from endnotes and move the to where the rest
+%of the text is. 9pt is approximate, there is probably a better way.
+\patchcmd{\enoteformat}{1.8em}{9pt}{}{}
+
+
+%Provide the list command used by the pandoc latex engine.
+%I'm changing the length of parskip, but a better solution would be to provide
+%a better list command
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{11pt}}
+
+  
+%Copyright notice
+\setlength{\fboxsep}{3pt}
+\newcommand\copyrighttext{
+\footnotesize 
+\addvspace{3pt}
+\centerline{
+\textbf{
+$if(conference)$
+Proceedings of $conference$
+$else$ 
+Conference NOT DEFINED, set "conference:"-YAML variable
+$endif$
+}}
+  \addvspace{11pt}
+  \textcopyright \the\year{} Authors. Personal and educational classroom use of this paper is allowed, commercial use requires specific permission from the author.}
+\newcommand\copyrightnotice{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south,yshift=11pt] at (current page.south) {\fbox{\parbox{\dimexpr\textwidth-\fboxsep-\fboxsep-\fboxsep-\fboxrule\relax}{\copyrighttext}}};
+\end{tikzpicture}%
+}
+
+
+%% Page Numbering
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{\centering -- \thepage{} --}
+ 
+
+%%No Page Number on First Page
+\fancypagestyle{plain}{%
+  \fancyhf{} % clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+\titlespacing*\section{0pt}{0pt}{0pt minus 14pt}
+\titlespacing*\subsection{0pt}{0pt}{0pt minus 14pt}
+\titlespacing*\subsubsection{0pt}{0pt}{0pt minus 14pt}
+}
+
+
+%% Section Fonts
+\newfontfamily\sectionfont[]{Arial}
+\setmainfont{Times New Roman}
+\titleformat{\section}
+  {\sectionfont\large\bfseries\uppercase}
+  {\thesection}{}{}
+\titleformat{\subsection}
+  {\sectionfont\large\bfseries}
+  {\thesection}{}{}
+\titleformat{\subsubsection}
+  {\sectionfont\large\slshape}
+  {\thesection}{}{}
+
+  
+%%Titling
+\makeatletter
+\patchcmd{\@maketitle}{\vskip 70\p@}{\addvspace{-2\baselineskip}}{}{}
+\patchcmd{\@maketitle}{\vskip 2em}{}{}{}
+\patchcmd{\@maketitle}{\LARGE \@title}{\fontsize{18}{18}\bfseries\sectionfont\@title}{}{}
+\makeatother
+
+
+%Set font for author and affiliation info
+\renewcommand\Authfont{\Large\bfseries\fontsize{14}{14}}
+\renewcommand\Affilfont{\large\mdseries\fontsize{11}{11}}
+\setlength{\affilsep}{0em}
+
+
+%%Section Spacing
+%%\titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+\titlespacing*\section{0pt}{0pt}{-11pt}
+\titlespacing*\subsection{0pt}{0pt}{-11pt}
+\titlespacing*\subsubsection{0pt}{0pt}{-11pt}
+
+
+%No indents for paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{11pt}
+
+
+%Make large images behave better
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+
+%%Section numbering
+\setcounter{secnumdepth}{0}
+
+
+%Write title
+\title{\addvspace{-2\baselineskip}$title$}
+
+%Write author information
+\begingroup
+$for(author)$
+\author{$author.name$}
+\affil{$author.affiliation$ \\
+$if(author.address)$
+$author.address$ \\
+$endif$
+$if(author.address2)$
+$author.address2$ \\
+$endif$
+$if(author.telephone)$
+$author.telephone$ \\
+$endif$
+$if(author.email)$
+$author.email$
+$endif$}
+$endfor$
+\endgroup
+
+\date{\vspace{-60pt}}
+
+\begin{document}
+\pagenumbering{gobble} 
+\newpage
+\pagenumbering{arabic}  
+\addvspace{-1\baselineskip}
+   \maketitle
+   \addvspace{-1\baselineskip}
+    \copyrightnotice
+    
+
+$body$
+
+\end{document}
