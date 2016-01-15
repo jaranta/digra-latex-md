@@ -133,3 +133,11 @@ This template (used originally in DiGRA 2011 conference) was developed based on 
 \theendnotes
 
 # Bibliography
+
+\newcounter{paras}
+\everypar{%
+  \stepcounter{paras}%
+  \ifnum\value{paras}>0 
+    \hangindent=1cm \hangafter=1
+	\setlength{\parskip}{0pt}
+  \fi}
