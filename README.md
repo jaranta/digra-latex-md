@@ -15,7 +15,9 @@ You must start your markdown-formatted file with a YAML-section, e.g.
 	 conference: "1^st^ International Joint Conference of DiGRA and FDG"
 	 ---
 
-And end the document with
+If you wish to anonymize the output, you can set the YAML-variable `anonymous` to `true`. That will withold the author name(s) from the start of the document.
+
+End the document with
 
 	\theendnotes
 

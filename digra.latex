@@ -163,6 +163,10 @@ $endif$
 
 %Write author information
 \begingroup
+$if(anonymous)$
+\author{Author name(s) witheld}
+\affil{Affiliation(s) witheld}
+$else$
 $for(author)$
 \author{$author.name$}
 \affil{$author.affiliation$ \\
@@ -179,6 +183,7 @@ $if(author.email)$
 $author.email$
 $endif$}
 $endfor$
+$endif$
 \endgroup
 
 \date{\vspace{-60pt}}
