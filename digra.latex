@@ -164,8 +164,12 @@ $endif$
 %Write author information
 \begingroup
 $if(anonymous)$
-\author{Author name(s) witheld}
-\affil{Affiliation(s) witheld}
+\author{First Author}
+\affil{Institutional Affiliation \\
+Address line 1 \\
+Adress line 2 \\
+telephone \\
+firstauthor@institution.com}
 $else$
 $for(author)$
 \author{$author.name$}
