@@ -14,7 +14,6 @@ pdf:	$(SOURCE) $(IMGFOLDER)
 	--normalize \
 	--template=$(PDFTEMPLATE) \
 	--latex-engine=xelatex \
-	--smart --no-tex-ligatures \
 	--filter pandoc-citeproc \
 	$< -o $(SOURCEBASENAME).pdf
 
