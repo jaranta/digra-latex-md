@@ -13,7 +13,7 @@ pdf:	$(SOURCE) $(IMGFOLDER)
 	pandoc \
 	--normalize \
 	--template=$(PDFTEMPLATE) \
-	--latex-engine=xelatex \
+	--pdf-engine=xelatex \
 	--filter pandoc-citeproc \
 	$< -o $(SOURCEBASENAME).pdf
 
