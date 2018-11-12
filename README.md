@@ -39,6 +39,6 @@ Figure 1 is also missing, because it was not part of the original LaTeX template
 
 Convert the paper from markdown to pdf with
 
-	pandoc --latex-engine=xelatex --filter pandoc-citeproc --template=digra.latex digra.md -o digra.pdf
+	pandoc --pdf-engine=xelatex --filter pandoc-citeproc --template=digra.latex digra.md -o digra.pdf
 
 or use the included Makefile if you have `make` installed.
